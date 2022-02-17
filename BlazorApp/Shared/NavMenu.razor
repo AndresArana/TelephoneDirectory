@@ -1,0 +1,60 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Telephone Directory</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="AddContact">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Agregar Contacto
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="ExistContact">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Existe Contacto
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="ListContacts">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Listar Contactos
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="SearchContact">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Buscar Contacto
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="DeleteContact">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Eliminar Contacto
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="DirectoryFull">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Directorio Lleno
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="FreeSpaces">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Espacios Libres
+            </NavLink>
+        </div>
+
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
