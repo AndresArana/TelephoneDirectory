@@ -1,0 +1,42 @@
+@page "/ListContact"
+@using BlazorApp2.Shared;
+@inject HttpClient Http
+@inject NavigationManager Navigation
+<h3>Contacts</h3>
+@if (_contacts == null)
+{
+    <p><em>Cargando...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Telephone</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var contact in _contacts)
+            {
+                <tr>
+                    <td>@contact.Id</td>
+                    <td>@contact.name</td>
+                    <td>@contact.phone</td>
+                    <td>@contact.telephone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@code {
+
+    private List<Contact> _contacts;
+    protected override async Task OnInitializedAsync()
+    {
+        _contacts = await Http.GetFromJsonAsync<List<Contact>>("https://localhost:7086/api/contact");
+    }
+}
