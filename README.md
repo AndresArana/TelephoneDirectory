@@ -4,11 +4,8 @@ Programa funcional: crea, elimina, lista y busca contacto. Valida que los datos 
 Por implementar: validacion de que el nombre no se pueda repetir.
 
 -----------------------------
-
 ya implementado la validacion de que no se pueda repetir nombre al agregar.
-
 ------------------------------------
 Falta implementar la validacion: validar espacio en blanco.
-
 -----------------------------
 implementacion de espacios en blanco ya hecha.

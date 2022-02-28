@@ -9,8 +9,10 @@ namespace BlazorApp2.Shared
         [Required]
         public string name { get; set; }
         [Required]
+        [RegularExpression("([1-9][0-9]*)", ErrorMessage = "Por favor ingrese numeros validos")]
         public string telephone { get; set; }
         [Required]
+        [RegularExpression("([1-9][0-9]*)", ErrorMessage = "Por favor ingrese numeros validos")]
         public string phone { get; set; }
     }
 }

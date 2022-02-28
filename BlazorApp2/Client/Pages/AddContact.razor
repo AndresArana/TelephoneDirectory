@@ -6,17 +6,21 @@
 <h3>Add Contact</h3>
 
 <EditForm Model="@_contact" OnValidSubmit="Post">
+    <DataAnnotationsValidator />
     <div class="form-group">
         <label>Name Contact: </label>
         <InputText @bind-Value="_contact.name" />
+        <ValidationMessage For="@(() => _contact.name)" />
     </div>
     <div class="form-group">
         <label>Phone Contact: </label>
         <InputText @bind-Value="_contact.phone" />
+        <ValidationMessage For="@(() => _contact.phone)" />
     </div>
     <div class="form-group">
         <label>Cellphone Contact: </label>
         <InputText @bind-Value="_contact.telephone" />
+        <ValidationMessage For="@(() => _contact.telephone)" />
     </div>
     <div class="form-group">
         <input type="submit" class="btn btn-success" value="Add Contact" />
@@ -51,19 +55,33 @@
     }
     private bool ValidateNullAdd()
     {
-        if (_contact.name == null || _contact.phone == null || _contact.telephone == null)
+        try
         {
-            message = "Some data is missing, please check and enter the data again";
-            return false;
+            if (_contact.name == null || _contact.phone == null || _contact.telephone == null)
+            {
+                message = "Some data is missing, please check and enter the data again";
+                return false;
+            }
+        }
+        catch (Exception error)
+        {
+            Console.WriteLine("{0}", error.Message);
         }
         return true;
     }
     private bool ValidateExistContactAdd()
     {
-        if (bool.Parse(infoContact) == true)
+        try
         {
-            message = "The contact already exists";
-            return true;
+            if (bool.Parse(infoContact) == true)
+            {
+                message = "The contact already exists";
+                return true;
+            }
+        }
+        catch (Exception error)
+        {
+            Console.WriteLine("{0}", error.Message);
         }
         return false;
     }
