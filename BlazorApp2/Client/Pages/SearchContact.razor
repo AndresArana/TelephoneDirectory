@@ -6,8 +6,8 @@
 <EditForm Model="@contact">
     <div class="form-group">
         <label>Name: </label>
-        <InputText @bind-Value="name" />
-        <button type="submit" class="btn btn-success" @onclick="(() => GetContact(name))">Search Contact</button>
+        <InputText @bind-Value="nameContact" />
+        <button type="submit" class="btn btn-success" @onclick="(() => GetContact())">Search Contact</button>
     </div>
 </EditForm>
 
@@ -21,16 +21,25 @@
     </span>
 </div>
 @code {
-
-    private Contact contact = new Contact();
-
+    private Contact contact = new();
     string message = "";
-    private string name;
+    private string nameContact;
+    private string infoContact;
 
-    private async Task GetContact(string name)
+    private async Task GetContact()
     {
-        string info = await Http.GetStringAsync($"https://localhost:7086/api/contact/SearchContact/{name}");
-        message = info;
-    }
+        if (ValidateSearchNull() == false) return;
 
+        infoContact = await Http.GetStringAsync($"https://localhost:7086/api/contact/SearchContact/{nameContact}");
+        message = infoContact;
+    }
+    public bool ValidateSearchNull()
+    {
+        if (nameContact == null)
+        {
+            message = "Some data is missing, please check and enter the data again";
+            return false;
+        }
+        return true;
+    }
 }

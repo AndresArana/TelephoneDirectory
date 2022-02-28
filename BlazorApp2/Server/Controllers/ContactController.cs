@@ -29,32 +29,39 @@ namespace BlazorApp2.Shared
         }
 
         [HttpGet("SearchContact/{name}")]
-        public string GetContactById(string name)
+        public string SearchContact(string name)
         {
             var contact = _context.Contacts.SingleOrDefault(e => e.name == name);
-            string message = "";
             if (contact == null)
             {
-                message = " contact does exist";
-                return message;
+                return "Contact does exist";
             }
-            message = "Name: "+ contact.name + " - " + "Phone: "+ contact.phone + " - " + "Telephone: " + contact.telephone;
-            return message;
+            return  "Name: " + contact.name + " - " + "Phone: " + contact.phone + " - " + "Telephone: " + contact.telephone;
+            
+        }
+        [HttpGet("ExistinContact/{name}")]
+        public bool ExistinContact(string name)
+        {
+            var contact = _context.Contacts.SingleOrDefault(e => e.name == name);
+            if (contact == null)
+            {
+                return false;
+            }
+            return true;
         }
 
+
         [HttpDelete("DeleteContact/{name}")]
-        public IActionResult Delete(string name)
+        public bool DeleteContact(string name)
         {
             var contact = _context.Contacts.SingleOrDefault(e => e.name == name);
-            string message = "";
             if (contact == null)
             {
-                message = " contact does exist";
+                return false;
             }
-            message = "Contact with the name deteled";
             _context.Contacts.Remove(contact);
             _context.SaveChanges();
-            return Created("api/contacts/" + contact.Id, contact);
+            return true;
         }
 
 
@@ -72,8 +79,9 @@ namespace BlazorApp2.Shared
         // }
 
         [HttpPost]
-        public IActionResult AddContact(Contact contact)
+        public void AddContact(Contact contact)
         {
+            if (ExistinContact(contact.name) == true) return;
             try
             {
                 _context.Contacts.Add(contact);
@@ -83,7 +91,6 @@ namespace BlazorApp2.Shared
             {
                 throw;
             }
-            return Created("api/contacts/" + contact.Id, contact);
         }
     }
 }

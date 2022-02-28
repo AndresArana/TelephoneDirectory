@@ -6,8 +6,8 @@
 <EditForm Model="@contact">
     <div class="form-group">
         <label>Name: </label>
-        <InputText @bind-Value="name" />
-        <button type="submit" class="btn btn-success" @onclick="(() => DeleteContacts(name))">Delete Contact</button>
+        <InputText @bind-Value="nameContact" />
+        <button type="submit" class="btn btn-success" @onclick="(() => DeleteContacts())">Delete Contact</button>
     </div>
 </EditForm>
 <div class="alert alert-secondary mt-4">
@@ -19,12 +19,38 @@
 
     private Contact contact = new Contact();
 
-    string message = "";
-    private string name;
+    string message;
+    private string nameContact;
+    private string infoContact;
 
-    private async Task DeleteContacts(string name)
+    private async Task DeleteContacts()
     {
-        await Http.DeleteAsync($"https://localhost:7086/api/contact/DeleteContact/{name}");
+        if (ValidateDeleteNull() == false) return;
+
+        infoContact = await Http.GetStringAsync($"https://localhost:7086/api/contact/ExistinContact/{nameContact}");
+
+        if (ValidateExistContactDelete() == false)return;
+
+        await Http.DeleteAsync($"https://localhost:7086/api/contact/DeleteContact/{nameContact}");
         message = "Contact deleted successfully";
+    }
+
+    public bool ValidateDeleteNull()
+    {
+        if (nameContact == null)
+        {
+            message = "Some data is missing, please check and enter the data again";
+            return false;
+        }
+        return true;
+    }
+    public bool ValidateExistContactDelete()
+    {
+        if (bool.Parse(infoContact) == false)
+        {
+            message = " contact does exist";
+            return false;
+        }
+        return true;
     }
 }
