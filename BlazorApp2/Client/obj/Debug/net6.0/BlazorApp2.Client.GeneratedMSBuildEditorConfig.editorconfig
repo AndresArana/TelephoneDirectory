@@ -11,45 +11,45 @@ build_property.EnableTrimAnalyzer = true
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = BlazorApp2.Client
 build_property.RootNamespace = BlazorApp2.Client
-build_property.ProjectDir = c:\Users\ragarciaa\Desktop\DirectoryBlazoe\BlazorApp2\Client\
+build_property.ProjectDir = C:\Users\ragarciaa\Desktop\GitClone\TelephoneDirectory\BlazorApp2\Client\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\ragarciaa\Desktop\DirectoryBlazoe\BlazorApp2\Client
+build_property.MSBuildProjectDirectory = C:\Users\ragarciaa\Desktop\GitClone\TelephoneDirectory\BlazorApp2\Client
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/ragarciaa/Desktop/DirectoryBlazoe/BlazorApp2/Client/App.razor]
+[C:/Users/ragarciaa/Desktop/GitClone/TelephoneDirectory/BlazorApp2/Client/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/ragarciaa/Desktop/DirectoryBlazoe/BlazorApp2/Client/Pages/AddContact.razor]
+[C:/Users/ragarciaa/Desktop/GitClone/TelephoneDirectory/BlazorApp2/Client/Pages/AddContact.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQ29udGFjdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/ragarciaa/Desktop/DirectoryBlazoe/BlazorApp2/Client/Pages/DeleteContact.razor]
+[C:/Users/ragarciaa/Desktop/GitClone/TelephoneDirectory/BlazorApp2/Client/Pages/DeleteContact.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlQ29udGFjdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/ragarciaa/Desktop/DirectoryBlazoe/BlazorApp2/Client/Pages/ListContact.razor]
+[C:/Users/ragarciaa/Desktop/GitClone/TelephoneDirectory/BlazorApp2/Client/Pages/ListContact.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdENvbnRhY3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/ragarciaa/Desktop/DirectoryBlazoe/BlazorApp2/Client/Pages/SearchContact.razor]
+[C:/Users/ragarciaa/Desktop/GitClone/TelephoneDirectory/BlazorApp2/Client/Pages/SearchContact.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VhcmNoQ29udGFjdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/ragarciaa/Desktop/DirectoryBlazoe/BlazorApp2/Client/Shared/SurveyPrompt.razor]
+[C:/Users/ragarciaa/Desktop/GitClone/TelephoneDirectory/BlazorApp2/Client/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/ragarciaa/Desktop/DirectoryBlazoe/BlazorApp2/Client/_Imports.razor]
+[C:/Users/ragarciaa/Desktop/GitClone/TelephoneDirectory/BlazorApp2/Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/ragarciaa/Desktop/DirectoryBlazoe/BlazorApp2/Client/Shared/MainLayout.razor]
+[C:/Users/ragarciaa/Desktop/GitClone/TelephoneDirectory/BlazorApp2/Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-lcph0kayp6
 
-[c:/Users/ragarciaa/Desktop/DirectoryBlazoe/BlazorApp2/Client/Shared/NavMenu.razor]
+[C:/Users/ragarciaa/Desktop/GitClone/TelephoneDirectory/BlazorApp2/Client/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-3xy2y9g3uc

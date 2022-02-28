@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj",
+      "projectUniqueName": "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj",
       "projectName": "BlazorApp2.Shared",
-      "projectPath": "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj",
+      "projectPath": "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj",
       "packagesPath": "C:\\Users\\ragarciaa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Shared\\obj\\",
+      "outputPath": "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ragarciaa\\AppData\\Roaming\\NuGet\\NuGet.Config"

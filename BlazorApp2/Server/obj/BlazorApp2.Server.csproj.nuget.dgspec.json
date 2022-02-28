@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Server\\BlazorApp2.Server.csproj": {}
+    "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Server\\BlazorApp2.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Client\\BlazorApp2.Client.csproj": {
+    "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Client\\BlazorApp2.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Client\\BlazorApp2.Client.csproj",
+        "projectUniqueName": "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Client\\BlazorApp2.Client.csproj",
         "projectName": "BlazorApp2.Client",
-        "projectPath": "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Client\\BlazorApp2.Client.csproj",
+        "projectPath": "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Client\\BlazorApp2.Client.csproj",
         "packagesPath": "C:\\Users\\ragarciaa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Client\\obj\\",
+        "outputPath": "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ragarciaa\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -27,8 +27,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj": {
-                "projectPath": "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj"
+              "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj": {
+                "projectPath": "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj"
               }
             }
           }
@@ -83,14 +83,14 @@
         }
       }
     },
-    "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Server\\BlazorApp2.Server.csproj": {
+    "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Server\\BlazorApp2.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Server\\BlazorApp2.Server.csproj",
+        "projectUniqueName": "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Server\\BlazorApp2.Server.csproj",
         "projectName": "BlazorApp2.Server",
-        "projectPath": "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Server\\BlazorApp2.Server.csproj",
+        "projectPath": "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Server\\BlazorApp2.Server.csproj",
         "packagesPath": "C:\\Users\\ragarciaa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Server\\obj\\",
+        "outputPath": "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ragarciaa\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -106,11 +106,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Client\\BlazorApp2.Client.csproj": {
-                "projectPath": "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Client\\BlazorApp2.Client.csproj"
+              "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Client\\BlazorApp2.Client.csproj": {
+                "projectPath": "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Client\\BlazorApp2.Client.csproj"
               },
-              "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj": {
-                "projectPath": "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj"
+              "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj": {
+                "projectPath": "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj"
               }
             }
           }
@@ -160,14 +160,14 @@
         }
       }
     },
-    "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj": {
+    "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj",
         "projectName": "BlazorApp2.Shared",
-        "projectPath": "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj",
+        "projectPath": "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Shared\\BlazorApp2.Shared.csproj",
         "packagesPath": "C:\\Users\\ragarciaa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ragarciaa\\Desktop\\DirectoryBlazoe\\BlazorApp2\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\ragarciaa\\Desktop\\GitClone\\TelephoneDirectory\\BlazorApp2\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ragarciaa\\AppData\\Roaming\\NuGet\\NuGet.Config"
