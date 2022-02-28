@@ -36,31 +36,43 @@ namespace BlazorApp2.Shared
             {
                 return "Contact does exist";
             }
-            return  "Name: " + contact.name + " - " + "Phone: " + contact.phone + " - " + "Telephone: " + contact.telephone;
-            
+            return "Name: " + contact.name + " - " + "Phone: " + contact.phone + " - " + "Telephone: " + contact.telephone;
+
         }
         [HttpGet("ExistinContact/{name}")]
         public bool ExistinContact(string name)
         {
+            try{
             var contact = _context.Contacts.SingleOrDefault(e => e.name == name);
             if (contact == null)
             {
                 return false;
             }
-            return true;
+            } catch (Exception error)
+        {
+            Console.WriteLine("{0}", error.Message);
         }
 
+            return true;
+        }
 
         [HttpDelete("DeleteContact/{name}")]
         public bool DeleteContact(string name)
         {
-            var contact = _context.Contacts.SingleOrDefault(e => e.name == name);
-            if (contact == null)
+            try
             {
-                return false;
+                var contact = _context.Contacts.SingleOrDefault(e => e.name == name);
+                if (contact == null)
+                {
+                    return false;
+                }
+                _context.Contacts.Remove(contact);
+                _context.SaveChanges();
             }
-            _context.Contacts.Remove(contact);
-            _context.SaveChanges();
+            catch (Exception error)
+            {
+                Console.WriteLine("{0}", error.Message);
+            }
             return true;
         }
 

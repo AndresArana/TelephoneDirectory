@@ -4,11 +4,12 @@
 @inject NavigationManager Navigation
 <h3>Contacts</h3>
 
-@if ( _contacts == null)
+@if (_contacts == null)
 {
     <p><em>No hay contactos</em></p>
 }
-else{
+else
+{
     <table class="table">
         <thead>
             <tr>
@@ -37,6 +38,13 @@ else{
     private List<Contact> _contacts;
     protected override async Task OnInitializedAsync()
     {
-        _contacts = await Http.GetFromJsonAsync<List<Contact>>("https://localhost:7086/api/contact");
+        try
+        {
+            _contacts = await Http.GetFromJsonAsync<List<Contact>>("https://localhost:7086/api/contact");
+        }
+        catch (Exception error)
+        {
+            Console.WriteLine("{0}", error.Message);
+        }
     }
 }

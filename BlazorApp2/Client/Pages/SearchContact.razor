@@ -28,17 +28,31 @@
 
     private async Task GetContact()
     {
-        if (ValidateSearchNull() == false) return;
+        try
+        {
+            if (ValidateSearchNull() == false) return;
 
-        infoContact = await Http.GetStringAsync($"https://localhost:7086/api/contact/SearchContact/{nameContact}");
-        message = infoContact;
+            infoContact = await Http.GetStringAsync($"https://localhost:7086/api/contact/SearchContact/{nameContact}");
+            message = infoContact;
+        }
+        catch (Exception error)
+        {
+            message = "An unexpected error has occurred, please try again";
+        }
     }
     public bool ValidateSearchNull()
     {
-        if (nameContact == null)
+        try
         {
-            message = "Some data is missing, please check and enter the data again";
-            return false;
+            if (nameContact == null)
+            {
+                message = "Some data is missing, please check and enter the data again";
+                return false;
+            }
+        }
+        catch (Exception error)
+        {
+            Console.WriteLine("{0}", error.Message);
         }
         return true;
     }

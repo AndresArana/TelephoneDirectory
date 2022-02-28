@@ -25,31 +25,52 @@
 
     private async Task DeleteContacts()
     {
-        if (ValidateDeleteNull() == false) return;
+        try
+        {
+            if (ValidateDeleteNull() == false) return;
 
-        infoContact = await Http.GetStringAsync($"https://localhost:7086/api/contact/ExistinContact/{nameContact}");
+            infoContact = await Http.GetStringAsync($"https://localhost:7086/api/contact/ExistinContact/{nameContact}");
 
-        if (ValidateExistContactDelete() == false)return;
+            if (ValidateExistContactDelete() == false) return;
 
-        await Http.DeleteAsync($"https://localhost:7086/api/contact/DeleteContact/{nameContact}");
-        message = "Contact deleted successfully";
+            await Http.DeleteAsync($"https://localhost:7086/api/contact/DeleteContact/{nameContact}");
+            message = "Contact deleted successfully";
+        }
+        catch (Exception error)
+        {
+            message = "An unexpected error has occurred, please try again";
+        }
     }
 
     public bool ValidateDeleteNull()
     {
-        if (nameContact == null)
+        try
         {
-            message = "Some data is missing, please check and enter the data again";
-            return false;
+            if (nameContact == null)
+            {
+                message = "Some data is missing, please check and enter the data again";
+                return false;
+            }
+        }
+        catch (Exception error)
+        {
+            Console.WriteLine("{0}", error.Message);
         }
         return true;
     }
     public bool ValidateExistContactDelete()
     {
-        if (bool.Parse(infoContact) == false)
+        try
         {
-            message = " contact does exist";
-            return false;
+            if (bool.Parse(infoContact) == false)
+            {
+                message = " contact does exist";
+                return false;
+            }
+        }
+        catch (Exception error)
+        {
+            Console.WriteLine("{0}", error.Message);
         }
         return true;
     }

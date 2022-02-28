@@ -33,18 +33,24 @@
     private string infoContact;
     private async Task Post()
     {
-        if (ValidateNullAdd() == false) return;
+        try
+        {
+            if (ValidateNullAdd() == false) return;
 
-        infoContact = await Http.GetStringAsync($"https://localhost:7086/api/contact/ExistinContact/{_contact.name}");
+            infoContact = await Http.GetStringAsync($"https://localhost:7086/api/contact/ExistinContact/{_contact.name}");
 
-        if (ValidateExistContactAdd() == true)return;
+            if (ValidateExistContactAdd() == true) return;
 
-        await Http.PostAsJsonAsync<Contact>("/api/contact", _contact);
-        message = "Contact added successfully";
+            await Http.PostAsJsonAsync<Contact>("/api/contact", _contact);
+            message = "Contact added successfully";
+        }
+        catch (Exception error)
+        {
+            message = "You have entered the data incorrectly, please check and try again";
+        }
     }
     private bool ValidateNullAdd()
     {
-
         if (_contact.name == null || _contact.phone == null || _contact.telephone == null)
         {
             message = "Some data is missing, please check and enter the data again";
