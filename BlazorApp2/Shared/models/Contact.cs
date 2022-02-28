@@ -9,8 +9,8 @@ namespace BlazorApp2.Shared
         [Required]
         public string name { get; set; }
         [Required]
-        public string telephone { get; set; }
+        public long telephone { get; set; }
         [Required]
-        public string phone { get; set; }
+        public long phone { get; set; }
     }
 }

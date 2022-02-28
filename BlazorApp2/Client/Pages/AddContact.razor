@@ -8,26 +8,41 @@
 <EditForm Model="@_contact" OnValidSubmit="Post">
     <div class="form-group">
         <label>Name Contact: </label>
-        <InputTextArea @bind-Value="_contact.name" />
+        <InputText @bind-Value="_contact.name" />
     </div>
     <div class="form-group">
-        <label>Phone Contact</label>
-        <InputTextArea @bind-Value="_contact.phone" />
+        <label>Phone Contact: </label>
+        <InputNumber @bind-Value="_contact.phone" />
     </div>
     <div class="form-group">
-        <label>Cellphone Contact</label>
-        <InputTextArea @bind-Value="_contact.telephone" />
+        <label>Cellphone Contact: </label>
+        <InputNumber @bind-Value="_contact.telephone" />
     </div>
     <div class="form-group">
         <input type="submit" class="btn btn-success" value="Add Contact" />
     </div>
 </EditForm>
-
+<div class="alert alert-secondary mt-4">
+    <span class="text-nowrap">
+        <p>@message</p>
+    </span>
+</div>
 @code {
+    string message = "";
     private Contact _contact = new();
     private async Task Post()
     {
+        if (ValidateNullAdd() == false) return;
         await Http.PostAsJsonAsync<Contact>("/api/contact", _contact);
-        Navigation.NavigateTo($"/listContact");
+        message = "Contact added successfully";
+    }
+    private bool ValidateNullAdd()
+    {
+        if (_contact.name == null || _contact.phone == null || _contact.telephone == null)
+        {
+            message = "Some data is missing, please check and enter the data again";
+            return false;
+        }
+        return true;
     }
 }

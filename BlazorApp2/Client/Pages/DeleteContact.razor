@@ -1,4 +1,4 @@
-@page "/SearchContact"
+@page "/DeleteContact"
 @using BlazorApp2.Shared;
 @inject HttpClient Http
 @inject NavigationManager Navigation;
@@ -7,15 +7,10 @@
     <div class="form-group">
         <label>Name: </label>
         <InputText @bind-Value="name" />
-        <button type="submit" class="btn btn-success" @onclick="(() => GetContact(name))">Search Contact</button>
+        <button type="submit" class="btn btn-success" @onclick="(() => DeleteContacts(name))">Delete Contact</button>
     </div>
 </EditForm>
-
-
 <div class="alert alert-secondary mt-4">
-    <span class="oi oi-person me-2" aria-hidden="true"></span>
-    <strong>contact information</strong><br><br>
-
     <span class="text-nowrap">
         <p>@message</p>
     </span>
@@ -27,10 +22,9 @@
     string message = "";
     private string name;
 
-    private async Task GetContact(string name)
+    private async Task DeleteContacts(string name)
     {
-        string info = await Http.GetStringAsync($"https://localhost:7086/api/contact/SearchContact/{name}");
-        message = info;
+        await Http.DeleteAsync($"https://localhost:7086/api/contact/DeleteContact/{name}");
+        message = "Contact deleted successfully";
     }
-
 }

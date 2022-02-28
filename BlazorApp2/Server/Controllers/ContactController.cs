@@ -28,30 +28,61 @@ namespace BlazorApp2.Shared
             }
         }
 
-        [HttpGet("{id}")]
-        public Contact GetContactById(int id)
+        [HttpGet("SearchContact/{name}")]
+        public string GetContactById(string name)
         {
-            return _context.Contacts.SingleOrDefault(e => e.Id == id);
+            var contact = _context.Contacts.SingleOrDefault(e => e.name == name);
+            string message = "";
+            if (contact == null)
+            {
+                message = " contact does exist";
+                return message;
+            }
+            message = "Name: "+ contact.name + " - " + "Phone: "+ contact.phone + " - " + "Telephone: " + contact.telephone;
+            return message;
         }
 
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        [HttpDelete("DeleteContact/{name}")]
+        public IActionResult Delete(string name)
         {
-            var emp = _context.Contacts.SingleOrDefault(x => x.Id == id);
-            if (emp == null)
+            var contact = _context.Contacts.SingleOrDefault(e => e.name == name);
+            string message = "";
+            if (contact == null)
             {
-                return NotFound("Contact with the Id " + id + "Does no exist");
+                message = " contact does exist";
             }
-            _context.Contacts.Remove(emp);
+            message = "Contact with the name deteled";
+            _context.Contacts.Remove(contact);
             _context.SaveChanges();
-            return Ok("Contact with the Id " + id + "deteled");
+            return Created("api/contacts/" + contact.Id, contact);
         }
+
+
+        // [HttpDelete]
+        // public IActionResult Delete(Contact c)
+        // {
+        //     var emp = _context.Contacts.SingleOrDefault(x => x.name == c.name);
+        //     if (emp == null)
+        //     {
+        //         return NotFound("Contact with the name Does no exist");
+        //     }
+        //     _context.Contacts.Remove(c);
+        //     _context.SaveChanges();
+        //     return Ok("Contact with the name deteled");
+        // }
 
         [HttpPost]
         public IActionResult AddContact(Contact contact)
         {
-            _context.Contacts.Add(contact);
-            _context.SaveChanges();
+            try
+            {
+                _context.Contacts.Add(contact);
+                _context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
             return Created("api/contacts/" + contact.Id, contact);
         }
     }
